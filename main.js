@@ -2134,8 +2134,8 @@ __webpack_require__.r(__webpack_exports__);
 // The list of file replacements can be found in `angular.json`.
 const environment = {
     production: false,
-    API_URL: 'http://167.172.157.67:3000/api',
-    API_URL_SOCKET: 'http://167.172.157.67:8181',
+    API_URL: 'http://159.65.42.246:3000/api',
+    API_URL_SOCKET: 'http://159.65.42.246:8181',
 };
 /*
  * For easier debugging in development mode, you can import the following file
