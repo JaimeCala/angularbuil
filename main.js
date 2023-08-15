@@ -166,20 +166,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "AppModule": () => (/* binding */ AppModule)
 /* harmony export */ });
-/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/platform-browser */ 71570);
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/common/http */ 53882);
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/platform-browser */ 71570);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/common/http */ 53882);
 /* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./app-routing.module */ 90158);
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./app.component */ 55041);
-/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/platform-browser/animations */ 20718);
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/platform-browser/animations */ 20718);
 /* harmony import */ var _components_header_header_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/header/header.component */ 43646);
 /* harmony import */ var _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/footer/footer.component */ 64662);
 /* harmony import */ var _material_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./material.module */ 63806);
 /* harmony import */ var _components_sidebar_sidebar_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/sidebar/sidebar.module */ 43567);
 /* harmony import */ var _interceptors_admin_interceptor__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./interceptors/admin-interceptor */ 53661);
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/forms */ 1707);
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/forms */ 1707);
 /* harmony import */ var _components_admin_banner_banner_module__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/admin/banner/banner.module */ 80655);
-/* harmony import */ var ngx_socket_io__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ngx-socket-io */ 75083);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/core */ 2316);
+/* harmony import */ var ngx_socket_io__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ngx-socket-io */ 75083);
+/* harmony import */ var src_environments_environment__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! src/environments/environment */ 92340);
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/common */ 54364);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/core */ 2316);
 
 
 
@@ -197,43 +199,47 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
 //import { PdfComponent } from './components/admin/pdf/pdf.component';
 //import { MatDatepickerModule} from '@angular/material/datepicker';
 //import { MatNativeDateModule } from '@angular/material/core';
-const config = { url: 'http://164.92.75.68:8181', options: {} };
+//const config: SocketIoConfig = { url: 'http://localhost:8181', options: {} };
+const config = { url: src_environments_environment__WEBPACK_IMPORTED_MODULE_8__.environment.API_URL_SOCKET, options: {} };
 class AppModule {
 }
 AppModule.ɵfac = function AppModule_Factory(t) { return new (t || AppModule)(); };
-AppModule.ɵmod = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵdefineNgModule"]({ type: AppModule, bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_1__.AppComponent] });
-AppModule.ɵinj = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵdefineInjector"]({ providers: [
-        { provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_9__.HTTP_INTERCEPTORS, useClass: _interceptors_admin_interceptor__WEBPACK_IMPORTED_MODULE_6__.AdminInterceptor, multi: true },
+AppModule.ɵmod = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdefineNgModule"]({ type: AppModule, bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_1__.AppComponent] });
+AppModule.ɵinj = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdefineInjector"]({ providers: [
+        { provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_10__.HTTP_INTERCEPTORS, useClass: _interceptors_admin_interceptor__WEBPACK_IMPORTED_MODULE_6__.AdminInterceptor, multi: true },
+        { provide: _angular_common__WEBPACK_IMPORTED_MODULE_11__.LocationStrategy, useClass: _angular_common__WEBPACK_IMPORTED_MODULE_11__.HashLocationStrategy },
     ], imports: [[
-            _angular_platform_browser__WEBPACK_IMPORTED_MODULE_10__.BrowserModule,
+            _angular_platform_browser__WEBPACK_IMPORTED_MODULE_12__.BrowserModule,
             _app_routing_module__WEBPACK_IMPORTED_MODULE_0__.AppRoutingModule,
-            _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_11__.BrowserAnimationsModule,
-            _angular_common_http__WEBPACK_IMPORTED_MODULE_9__.HttpClientModule,
+            _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_13__.BrowserAnimationsModule,
+            _angular_common_http__WEBPACK_IMPORTED_MODULE_10__.HttpClientModule,
             _material_module__WEBPACK_IMPORTED_MODULE_4__.MaterialModule,
             _components_sidebar_sidebar_module__WEBPACK_IMPORTED_MODULE_5__.SidebarModule,
-            _angular_forms__WEBPACK_IMPORTED_MODULE_12__.ReactiveFormsModule,
-            _angular_forms__WEBPACK_IMPORTED_MODULE_12__.FormsModule,
+            _angular_forms__WEBPACK_IMPORTED_MODULE_14__.ReactiveFormsModule,
+            _angular_forms__WEBPACK_IMPORTED_MODULE_14__.FormsModule,
             _components_admin_banner_banner_module__WEBPACK_IMPORTED_MODULE_7__.BannerModule,
             //MatDatepickerModule,
             //MatNativeDateModule,
-            ngx_socket_io__WEBPACK_IMPORTED_MODULE_13__.SocketIoModule.forRoot(config),
+            ngx_socket_io__WEBPACK_IMPORTED_MODULE_15__.SocketIoModule.forRoot(config),
         ]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵsetNgModuleScope"](AppModule, { declarations: [_app_component__WEBPACK_IMPORTED_MODULE_1__.AppComponent,
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵsetNgModuleScope"](AppModule, { declarations: [_app_component__WEBPACK_IMPORTED_MODULE_1__.AppComponent,
         //LoginComponent,
         //NavbarComponent,
         _components_header_header_component__WEBPACK_IMPORTED_MODULE_2__.HeaderComponent,
-        _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_3__.FooterComponent], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_10__.BrowserModule,
+        _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_3__.FooterComponent], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_12__.BrowserModule,
         _app_routing_module__WEBPACK_IMPORTED_MODULE_0__.AppRoutingModule,
-        _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_11__.BrowserAnimationsModule,
-        _angular_common_http__WEBPACK_IMPORTED_MODULE_9__.HttpClientModule,
+        _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_13__.BrowserAnimationsModule,
+        _angular_common_http__WEBPACK_IMPORTED_MODULE_10__.HttpClientModule,
         _material_module__WEBPACK_IMPORTED_MODULE_4__.MaterialModule,
         _components_sidebar_sidebar_module__WEBPACK_IMPORTED_MODULE_5__.SidebarModule,
-        _angular_forms__WEBPACK_IMPORTED_MODULE_12__.ReactiveFormsModule,
-        _angular_forms__WEBPACK_IMPORTED_MODULE_12__.FormsModule,
-        _components_admin_banner_banner_module__WEBPACK_IMPORTED_MODULE_7__.BannerModule, ngx_socket_io__WEBPACK_IMPORTED_MODULE_13__.SocketIoModule] }); })();
+        _angular_forms__WEBPACK_IMPORTED_MODULE_14__.ReactiveFormsModule,
+        _angular_forms__WEBPACK_IMPORTED_MODULE_14__.FormsModule,
+        _components_admin_banner_banner_module__WEBPACK_IMPORTED_MODULE_7__.BannerModule, ngx_socket_io__WEBPACK_IMPORTED_MODULE_15__.SocketIoModule] }); })();
 
 
 /***/ }),
@@ -2128,7 +2134,8 @@ __webpack_require__.r(__webpack_exports__);
 // The list of file replacements can be found in `angular.json`.
 const environment = {
     production: false,
-    API_URL: 'http://164.92.75.68:3000/api',
+    API_URL: 'http://167.172.157.67:3000/api',
+    API_URL_SOCKET: 'http://167.172.157.67:8181',
 };
 /*
  * For easier debugging in development mode, you can import the following file
